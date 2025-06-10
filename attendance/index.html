@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Attendance System</h1>
+    
+    <div id="register-form">
+      <h2>Register</h2>
+      <input type="text" id="reg-username" placeholder="Enter username">
+      <input type="password" id="reg-password" placeholder="Enter password">
+      <button onclick="register()">Register</button>
+    </div>
+
+    <div id="login-form">
+      <h2>Login</h2>
+      <input type="text" id="login-username" placeholder="Enter username">
+      <input type="password" id="login-password" placeholder="Enter password">
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="attendance-section" style="display: none;">
+      <button onclick="markAttendance()">Mark Attendance</button>
+      <button onclick="eraseTodayAttendance()">Erase Today's Attendance</button>
+      <h2>Attendance Log</h2>
+      <table id="attendance-table">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody id="attendance-list"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
